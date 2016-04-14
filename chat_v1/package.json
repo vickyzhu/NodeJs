@@ -1,0 +1,17 @@
+{
+  "description": "A chat demo app",
+  "version": "0.0.1",
+  "author": "filod",
+  "dependencies": {
+    "socket.io": "*",
+    "socket.io-client": "*",
+    "connect": "*"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "start": "/server/server.js"
+  },
+  "name": "chatoo"
+}
