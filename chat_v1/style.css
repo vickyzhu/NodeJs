@@ -1,0 +1,184 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #eee;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  color: rgba(0, 0, 0, .8);
+  text-shadow: 0 1px 1px #fff;
+}
+
+.wrap {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f3f3f3;
+  box-shadow: 0 0 25px rgba(0, 0, 0, .07), inset 0 1px 11px rgb(255, 255, 255);
+}
+/* 按钮和表单样式 */
+input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 12px;
+  width: 250px;
+  font-size: 14px;
+  color: #777;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+  margin-bottom: 10px;
+}
+input[type="text"]:focus {
+  border-color: #999;
+  outline: 0;
+}
+button {
+  margin: 0;
+  display: inline-block;
+  text-decoration: none;
+  background: #00b5d6;
+  border: 1px solid #00a5c3;
+  border-radius: 7px;
+  color: #fff;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, .6),
+              inset 0 0 10px #008da7;
+  font: 600 1.3em/1.7em "helvetica neue", helvetica, arial, sans-serif;
+  text-align: center;
+  text-shadow: 0 1px 1px #006679;
+  cursor: pointer;
+}
+button:hover,
+button:active,
+button:focus {
+  background: #009cb8;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, .7),
+             inset 0 0 10px #007287;
+}
+
+/* 布局样式  */
+.nickname {
+  text-align: center;
+  font: 15px;
+  color: rgba(0, 0, 0, .5);
+  display: block;
+}
+
+label {
+  display: block;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.nickname .nickname-err {
+  color: #8b0000;
+  font-size: 12px;
+  visibility: hidden;
+}
+.nickname {
+  /*display: none;*/
+}
+.messages {
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+}
+.send-message {
+  display: none;
+}
+
+.messages em {
+  text-shadow: 0 1px 0 #fff;
+  color: #999;
+}
+.messages p {
+  margin: 0;
+  color: rgba(0, 0, 0, .5);
+  font: 13px Helvetica, Arial;
+  padding: 5px 10px;
+}
+.messages p b {
+  display: inline-block;
+  padding-right: 10px;
+  color: rgba(0, 0, 0, .8);
+}
+.messages p:nth-child(even) {
+  background: #fafafa;
+}
+.messages .nicknames {
+  padding: 10px;
+  font-size: 13px;
+}
+.messages .nicknames span {
+  color: #000;
+  font-weight: bold;
+}
+.messages .nicknames b {
+  display: inline-block;
+  color: #fff;
+  background: #4FA72C;
+  padding: 3px 6px;
+  margin-right: 5px;
+  border-radius: 5px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+  cursor: pointer;
+}
+.messages .lines {
+  height: 250px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.send-message {
+  padding: 10px;
+  position: relative;
+}
+.send-message input:focus {
+  outline: 0;
+}
+
+.send-message button {
+  width: 110px;
+}
+
+/* 由于我们的应用比较简单因此将只针对三种宽度的设备进行优化 */
+
+/* 较宽屏幕 */
+@media (min-width: 960px) {
+  .nicknames {
+    float: right;
+    width: 160px;
+  }
+  .nicknames b,
+  .nicknames span {
+    display: block !important;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+}
+
+/* 横屏的手机或者平板 */
+@media (max-width: 959px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+/* 竖屏的手机 */
+@media (max-width: 320px) {
+  .to {
+    display: none;
+  }
+  .send-message button {
+    width: auto;
+  }
+  .message {
+    width: 190px !important;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
