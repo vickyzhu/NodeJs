@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='style.css' rel='stylesheet'/>
+  </head>
+  <body>
+   <h1>Socket.IO Chat Demo</h1>
+   <div class="wrap chat">
+      <div class="nickname">
+        <form class="set-nickname">
+          <label for="nick">输入昵称后进入聊天室</label>
+          <input class="nick" name="nick" type="text" placeholder="昵称" />
+          <button type="submit">进入</button>
+          <p class="nickname-err">该昵称已经有人使用</p>
+        </form>
+      </div>
+      <div class="messages">
+        <div class="nicknames">
+          <span>当前在线: </span>
+        </div>
+        <div class="lines"></div>
+      </div>
+      <form class="send-message">
+        <span class="to"> 发送给<b>所有人</b>：</span>
+        <input class="message" type="text" placeholder="在这里输入消息发送" />
+        <button>发送</button>
+      </form>
+    </div>
+    <script src='http://code.jquery.com/jquery-latest.min.js'></script>
+    <script src='socket-io.js'></script>
+    <script src='index.js'></script>
+  </body>
+</html>
